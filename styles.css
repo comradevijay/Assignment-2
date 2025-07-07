@@ -1,0 +1,78 @@
+body {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    background-color: lightcyan;
+    margin: 0;
+    padding: 20px;
+    overflow: hidden;
+}
+
+h1 {
+    color: #333;
+    font-size: 2.5rem;
+}
+
+p {
+    color: #555;
+    font-size: 1.2rem;
+    margin: 10px 0;
+}
+
+#reactionTime {
+    font-weight: bold;
+    color: #007bff;
+}
+
+#clickCount {
+    font-weight: bold;
+    color: #28a745;
+}
+
+#container {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#circle {
+    position: absolute;
+    background-color: red;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+}
+
+.piece {
+    position: absolute;
+    background-color: red;
+    border-radius: 50%;
+    opacity: 1;
+    animation: explode 1s forwards;
+}
+
+@keyframes explode {
+    to {
+        transform: translate(var(--dx), var(--dy)) scale(0);
+        opacity: 0;
+    }
+}
+
+/* Responsive text */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+    p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+    p {
+        font-size: 0.9rem;
+    }
+}
